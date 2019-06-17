@@ -1,0 +1,209 @@
+
+<section class="space--xs" id="about-section" data-section="about">
+    <div class="container">
+        <div class="row section-heading to-animate">
+
+            <div class='col-sm-12 text-center'>
+                <h2>{% t 'headings.about' %}</h2>
+            </div>
+
+            <div class='col-sm-12 col-md-6 text-center'>
+                <iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/OE3QTbgh-p8?rel=0" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+            </div>
+
+            <div class='col-sm-12 col-md-6'>
+                {% for c in site.translations[site.lang]["content"]["about"] %}
+                <p>{{ c }}</p>
+                {% endfor %}
+            </div>
+
+        </div>
+
+    </div>
+</section>
+
+
+<div class="donation-section2">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-7">
+        <h3>{% t 'donations.title' %}</h3>
+
+        <p>{% t 'donations.subtitle' %}</p>
+
+        <p><b>{% t 'donations.goal' %}</b></p>
+
+        <p>{% t 'donations.explanation' %}</p>
+
+        <p>{% t 'donations.recipient' %}</p>
+      </div>
+
+      <div class="col-md-5">
+
+        <div class="pop-shadow whitepaper-promo donation-card2 text-center">
+        <div class="thank-you-card" id="thank-you-card-general"></div>
+          <img class="donation-logo-bch pl-2 pr-2 mb-1" src="/img/bch-dev-fund.png" alt="Dev Fund">
+          <div class="donation-line"></div>
+          <div class="goal-percentage">{% t 'donations.percentage' %}</div>
+          <div class="pb-ctn">
+            <div class="pb-bckgrd"></div>
+            <div class="pb" id="goal-bar" color="#fab915"></div>
+          </div>
+          <div class="donation-info">
+          <h4 id="balance">0 BCH</h4>
+          <h5>{% t 'donations.total' %}</h5>
+          <h4 id="transactions">0</h4>
+          <h5>{% t 'donations.total_tx' %}</h5>
+          <h4 id="days-to-go">0</h4>
+          <h5>{% t 'donations.days_left' %}</h5>
+          </div>
+          <div class="donation-line"></div>
+
+          <img class="qr-codes" src="/img/general-address.png" alt="QR Donate">
+          <div class="donation-address" id="general-address">bitcoincash:qq29gww57twmvq07las39p3m65x8nw2ngvvuq6adpn</div>
+        </div>
+      </div>
+
+
+    </div>
+  </div>
+</div>
+
+
+
+<section class="space--xxs">
+    <div class="container benefits">
+       <!--  <div class="row space--xs">
+                <div class="col-sm-12">
+                    <div class="pop-shadow whitepaper-promo">
+                        <p><ion-icon name="heart" style="background-color:#4D4D4D"></ion-icon></p>
+                        <p><strong>{% t 'headings.donate' %}</strong></p>
+                        <p>{% t 'donate.description' %}</p>
+                        <hr>
+
+                        <div class="donation-card2">
+                          <div class="thank-you-card" id="thank-you-card-general"></div>
+                          <img class="donation-logo-bch" src="/img/bch-dev-fund.png" alt="BCH Dev Fund">
+                          <div class="donation-line"></div>
+                          <div class="goal-percentage">% of goal reached</div>
+                            <div class="pb-ctn">
+                              <div class="pb-bckgrd"></div>
+                              <div class="pb" id="goal-bar" color="#fab915"></div>
+                          </div>
+                          <div class="donation-info">
+                            <h4 id="balance">0 BCH</h4>
+                            <h5>donated of 800 BCH goal</h5>
+                            <h4 id="transactions">0</h4>
+                            <h5>donations made</h5>
+                            <h4 id="days-to-go">0</h4>
+                            <h5>days to go</h5>
+                          </div>
+
+                          <div class="donation-line"></div>
+                          <img class="qr-codes" src="/img/general-address.png" alt="Donation QR">
+                          <div class="donation-address" id="general-address">bitcoincash:qq29gww57twmvq07las39p3m65x8nw2ngvvuq6adpn</div>
+                          <a class="btn-donate-secodary" href="/fundraise/">Donate to a specific project</a>
+                        </div>
+
+
+                    </div>
+                </div>
+            </div> -->
+        <div class="row space--xs">
+            <div class="col-sm-12">
+                <div class="pop-shadow whitepaper-promo">
+                    <p><ion-icon name="document"></ion-icon></p>
+                    <p><strong>{% t 'headings.whitepaper' %}</strong></p>
+                    <p>{% t 'whitepaper.description' %}</p>
+                    <a href="bitcoin.pdf" title="Bitcoin Whitepaper" class="btn btn-secondary large btn-round">{% t 'headings.whitepaper' %}</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+    {% include home/roadmap-cta.html %}
+
+    <section class="space--xxs no-bottom" >
+        <div class="container benefits">
+
+            {% assign features = site.translations[site.lang]["features"] %}
+            <div class="row text-center">
+                <div class="col-sm-4 col-md-4 to-animate">
+                    <div class="pop-shadow">
+                        <p><ion-icon name="jet"></ion-icon></p>
+                        <p><strong>{{ features[0].title }}</strong></p>
+                        <p>{{ features[0].description }}</p>
+                    </div>
+                </div>
+                <div class="col-sm-4 col-md-4 to-animate">
+                    <div class="pop-shadow">
+                        <p><ion-icon name="cog"></ion-icon></p>
+                        <p><strong>{{ features[1]['title'] }}</strong></p>
+                        <p>{{ features[1]['description'] }}</p>
+                    </div>
+                </div>
+                <div class="col-sm-4 col-md-4 to-animate">
+                    <div class="pop-shadow">
+                        <p><ion-icon name="arrow-down"></ion-icon></p>
+                        <p><strong>{{ features[2]['title'] }}</strong></p>
+                        <p>{{ features[2]['description'] }}</p>
+                    </div>
+                </div>
+            </div>
+            <div class="row text-center">
+                <div class="col-sm-4 col-md-4 to-animate">
+                    <div class="pop-shadow">
+                        <p><ion-icon name="ios-cafe"></ion-icon></p>
+                        <p><strong>{{ features[3]['title'] }}</strong></p>
+                        <p>{{ features[3]['description'] }}</p>
+                    </div>
+                </div>
+                <div class="col-sm-4 col-md-4 to-animate">
+                    <div class="pop-shadow">
+                        <p><ion-icon name="business"></ion-icon></p>
+                        <p><strong>{{ features[4]['title'] }}</strong></p>
+                        <p>{{ features[4]['description'] }}</p>
+                    </div>
+                </div>
+                <div class="col-sm-4 col-md-4 to-animate">
+                    <div class="pop-shadow">
+                        <p><ion-icon name="lock"></ion-icon></p>
+                        <p><strong>{{ features[5]['title'] }}</strong></p>
+                        <p>{{ features[5]['description'] }}</p>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <section class="space--xxs" id="connect">
+        <div class="slant-top"></div>
+        <div class="container">
+            <div class="community-cta section-heading to-animate">
+                <div class="col-sm-12 col-lg-8 col-lg-offset-2 text-center">
+                    <h5>{% t 'headings.community' %}</h5>
+                    <a class="btn btn-default large round" href="http://reddit.com/r/btc" target="_blank">
+                        <ion-icon name="logo-reddit"></ion-icon> /r/btc
+                    </a>
+                    <a class="btn btn-default large round" href="http://reddit.com/r/bitcoincash" target="_blank">
+                        <ion-icon name="logo-reddit"></ion-icon> /r/bitcoincash
+                    </a>
+                    <a class="btn btn-default large round" href="https://www.facebook.com/bitcoincashorg/" target="_blank">
+                        <ion-icon name="logo-facebook"></ion-icon> Facebook
+                    </a>
+                    <a class="btn btn-default large round" href="https://t.me/BitcoinCashUpdates" target="_blank">
+                        <ion-icon name="paper-plane"></ion-icon> Telegram
+                    </a>
+                    <a class="btn btn-default large round" href="https://bitcoincashtalk.org" target="_blank">
+                        <ion-icon name="globe" role="img" class="hydrated" aria-label="globe"></ion-icon> BitcoinCashTalk
+                    </a>
+                    <a class="btn btn-default large round" href="https://github.com/bitcoincashorg/bitcoincash.org" target="_blank">
+                            <i class="socicon socicon-github"></i> GitHub
+                        </a>
+                </div>
+            </div>
+        </div>
+        <div class="slant"></div>
+    </section>
